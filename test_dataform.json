@@ -1,6 +1,6 @@
 {
     "warehouse": "bigquery",
     "defaultSchema": "example_dataset",
-    "defaultDatabase": "danny-bq",
+    "defaultDatabase": "danny-bq-test",
     "concurrentQueryLimit": 100
 }
