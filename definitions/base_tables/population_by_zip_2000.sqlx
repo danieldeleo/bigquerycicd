@@ -1,4 +1,7 @@
-config { hasOutput: true }
+config { 
+  hasOutput: true,
+  tags: "base_table"
+}
 
 -- Table created for the first time
 -- CREATE TABLE IF NOT EXISTS ${self()}
@@ -26,8 +29,8 @@ SELECT
 FROM bigquery-public-data.census_bureau_usa.population_by_zip_2000;
 
 -- -- Table schema changed
--- ALTER TABLE ${self()}
---   ADD COLUMN IF NOT EXISTS new_column STRING OPTIONS(description="my description");
+ALTER TABLE ${self()}
+  ADD COLUMN IF NOT EXISTS new_column STRING OPTIONS(description="my description");
 
 -- -- Table schema changed again
 -- ALTER TABLE ${self()}

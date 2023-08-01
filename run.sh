@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ONLY USED WHEN INVOKING DATAFORM CLI
+# ONLY FOR RUNNING WITH DATAFORM CLI
 
 if [[ "${BRANCH_NAME}" != "master" ]]; then
   export ENV=test

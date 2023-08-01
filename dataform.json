@@ -3,6 +3,11 @@
   "assertionSchema": "dataform_assertions",
   "warehouse": "bigquery",
   "defaultDatabase": "danny-bq-test",
+<<<<<<< HEAD
   "defaultLocation": "US"
+=======
+  "defaultLocation": "US",
+  "concurrentQueryLimit": 100
+>>>>>>> refs/heads/dev
 }
     
