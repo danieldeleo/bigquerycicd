@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# ONLY USED WHEN INVOKING DATAFORM CLI
+
 if [[ "${BRANCH_NAME}" != "master" ]]; then
   export ENV=test
 else
