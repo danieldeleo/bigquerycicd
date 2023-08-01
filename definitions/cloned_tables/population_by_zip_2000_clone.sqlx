@@ -1,0 +1,8 @@
+config { 
+  hasOutput: true,
+  tags: "cloned_table"
+}
+
+CREATE OR REPLACE TABLE
+${self()}
+CLONE ${ref("population_by_zip_2000")};

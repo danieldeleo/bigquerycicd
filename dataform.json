@@ -2,7 +2,8 @@
   "defaultSchema": "dataform",
   "assertionSchema": "dataform_assertions",
   "warehouse": "bigquery",
-  "defaultDatabase": "danny-bq",
-  "defaultLocation": "US"
+  "defaultDatabase": "danny-bq-test",
+  "defaultLocation": "US",
+  "concurrentQueryLimit": 100
 }
     

@@ -1,4 +1,7 @@
-config { hasOutput: true , tags: ["base_tables"]}
+config { 
+  hasOutput: true,
+  tags: "base_table"
+}
 
 -- Table created for the first time
 -- CREATE TABLE IF NOT EXISTS ${self()}

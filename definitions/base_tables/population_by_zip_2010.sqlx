@@ -1,4 +1,7 @@
-config { hasOutput: true , tags: ["base_tables"]}
+config { 
+  hasOutput: true,
+  tags: "base_table",
+}
 
 CREATE OR REPLACE TABLE ${self()}
 (
