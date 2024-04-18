@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
     bucket  = "danny-bq"
-    prefix  = "terraform/state/prod"
+    prefix  = "terraform/state/dev"
   }
 }
