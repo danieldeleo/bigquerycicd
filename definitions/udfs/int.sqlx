@@ -1,4 +1,7 @@
-config { hasOutput: true }
+config { 
+  hasOutput: true,
+  tags: ["udf"]
+}
 /*
  * Copyright 2019 Google LLC
  *

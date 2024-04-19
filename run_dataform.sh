@@ -25,6 +25,14 @@ fi
 printf """
 Executing the following dataform command:
 ************************************************************
+dataform run --tags=udf
+************************************************************
+"""
+dataform run --tags=udf 
+
+printf """
+Executing the following dataform command:
+************************************************************
 dataform test --vars=udfTests=true --run-tests %s %s 
 ************************************************************
 """ "${all_dataform_tags}" "${all_dataform_actions}"
