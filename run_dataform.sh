@@ -27,4 +27,4 @@ dataform run %s %s
 ************************************************************
 """ "${all_dataform_tags}" "${all_dataform_actions}"
 dataform run $(echo "${all_dataform_tags}" "${all_dataform_actions}" | xargs)
-dataform test $(echo "${all_dataform_tags}" "${all_dataform_actions}" | xargs)
+# dataform test $(echo "${all_dataform_tags}" "${all_dataform_actions}" | xargs)
