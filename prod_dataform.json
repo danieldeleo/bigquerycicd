@@ -4,5 +4,8 @@
     "assertionSchema": "dataform_assertions",
     "defaultDatabase": "danny-bq",
     "defaultLocation": "US",
-    "concurrentQueryLimit": 100
+    "concurrentQueryLimit": 100,
+    "vars": {
+        "run_unit_tests": true
+    }
 }
