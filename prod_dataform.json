@@ -6,6 +6,6 @@
     "defaultLocation": "US",
     "concurrentQueryLimit": 100,
     "vars": {
-        "run_unit_tests": true
+        "run_unit_tests": "true"
     }
 }
