@@ -25,7 +25,7 @@ fi
 printf """
 Executing the following dataform command:
 ************************************************************
-dataform run --run-tests %s %s --vars=run_unit_tests:true
+dataform run --vars=runUnitTests:true --run-tests %s %s 
 ************************************************************
 """ "${all_dataform_tags}" "${all_dataform_actions}"
 dataform run --vars=runUnitTests:true --run-tests $(echo "${all_dataform_tags}" "${all_dataform_actions}" | xargs)
@@ -33,7 +33,7 @@ dataform run --vars=runUnitTests:true --run-tests $(echo "${all_dataform_tags}" 
 printf """
 Executing the following dataform command:
 ************************************************************
-dataform run %s %s
+dataform run --run-tests %s %s
 ************************************************************
 """ "${all_dataform_tags}" "${all_dataform_actions}"
-dataform run $(echo "${all_dataform_tags}" "${all_dataform_actions}" | xargs)
+dataform run --run-tests $(echo "${all_dataform_tags}" "${all_dataform_actions}" | xargs)
