@@ -23,7 +23,8 @@ if [[ -n $DATAFORM_ACTIONS ]]; then
 fi
 
 printf """
-Executing the following dataform command:
+Executing the following dataform command to deploy UDFs
+first since they need to exist before the tests can run:
 ************************************************************
 dataform run --tags=udf
 ************************************************************
@@ -31,7 +32,7 @@ dataform run --tags=udf
 dataform run --tags=udf 
 
 printf """
-Executing the following dataform command:
+Executing the following dataform command to run unit tests:
 ************************************************************
 dataform test --vars=udfTests=true --run-tests %s %s 
 ************************************************************
@@ -39,7 +40,7 @@ dataform test --vars=udfTests=true --run-tests %s %s
 dataform test --vars=udfTests=true $(echo "${all_dataform_tags}" "${all_dataform_actions}" | xargs)
 
 printf """
-Executing the following dataform command:
+Executing the following dataform command to deploy everything:
 ************************************************************
 dataform run %s %s
 ************************************************************
