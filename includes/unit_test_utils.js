@@ -13,23 +13,25 @@
 // limitations under the License.
 
 function generate_udf_test(udf_name, test_cases) {
-    const test_name = `${udf_name}_${uuidv4()}`;
-    create_dataform_test_view(test_name, udf_name, test_cases);
-    let expected_output_select_statements = [];
-    let test_input_select_statements = [];
-    test_cases.forEach((test_case) => {
-        let udf_positional_inputs = [];
-        test_case.inputs.forEach((input, index) => {
-            udf_positional_inputs.push(`${input} AS test_input_${index}`);
+    if (dataform.projectConfig.vars.run_unit_tests === true) {
+        const test_name = `${udf_name}_${uuidv4()}`;
+        create_dataform_test_view(test_name, udf_name, test_cases);
+        let expected_output_select_statements = [];
+        let test_input_select_statements = [];
+        test_cases.forEach((test_case) => {
+            let udf_positional_inputs = [];
+            test_case.inputs.forEach((input, index) => {
+                udf_positional_inputs.push(`${input} AS test_input_${index}`);
+            });
+            test_input_select_statements.push(`\n  SELECT ${udf_positional_inputs.join(', ')}`);
+            expected_output_select_statements.push(`SELECT ${test_case.expected_output} AS udf_output`);
         });
-        test_input_select_statements.push(`\n  SELECT ${udf_positional_inputs.join(', ')}`);
-        expected_output_select_statements.push(`SELECT ${test_case.expected_output} AS udf_output`);
-    });
-    run_dataform_test(
-        test_name,
-        test_input_select_statements,
-        expected_output_select_statements
-    );
+        run_dataform_test(
+            test_name,
+            test_input_select_statements,
+            expected_output_select_statements
+        );
+    };
 }
 
 function create_dataform_test_view(test_name, udf_name, test_cases) {
