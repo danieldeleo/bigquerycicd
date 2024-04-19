@@ -25,10 +25,10 @@ fi
 printf """
 Executing the following dataform command:
 ************************************************************
-dataform test --vars=runUnitTests=true --run-tests %s %s 
+dataform test --vars=udfTests=true --run-tests %s %s 
 ************************************************************
 """ "${all_dataform_tags}" "${all_dataform_actions}"
-dataform test --vars=runUnitTests=true $(echo "${all_dataform_tags}" "${all_dataform_actions}" | xargs)
+dataform test --vars=udfTests=true $(echo "${all_dataform_tags}" "${all_dataform_actions}" | xargs)
 
 printf """
 Executing the following dataform command:

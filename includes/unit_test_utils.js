@@ -13,7 +13,7 @@
 // limitations under the License.
 
 function generate_udf_test(udf_name, test_cases) {
-    if (dataform.projectConfig.vars.runUnitTests === "true") {
+    if (dataform.projectConfig.vars.udfTests === "true") {
         const test_name = `${udf_name}_${uuidv4()}`;
         create_dataform_test_view(test_name, udf_name, test_cases);
         let expected_output_select_statements = [];
