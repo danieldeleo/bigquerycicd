@@ -14,6 +14,9 @@
 
 const { generate_udf_test } = unit_test_utils;
 
+
+operate("dummy-operation-to-set-dependency").queries(ctx => ["SELECT ${ref('int')}(1))  AS udf_output"]);
+
 generate_udf_test("int", [
     {
         inputs: [`"-1"`],
