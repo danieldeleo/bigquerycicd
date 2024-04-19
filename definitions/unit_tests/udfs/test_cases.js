@@ -30,3 +30,33 @@ generate_udf_test("int", [
         expected_output: `CAST(7 AS INT64)`
     },
 ]);
+generate_udf_test("getbit", [
+    {
+        inputs: [
+            `CAST(23 AS INT64)`,
+            `CAST(2 AS INT64)`
+        ],
+        expected_output: `CAST(1 AS INT64)`
+    },
+    {
+        inputs: [
+            `CAST(23 AS INT64)`,
+            `CAST(3 AS INT64)`
+        ],
+        expected_output: `CAST(0 AS INT64)`
+    },
+    {
+        inputs: [
+            `CAST(11 AS INT64)`,
+            `CAST(100 AS INT64)`
+        ],
+        expected_output: `CAST(0 AS INT64)`
+    },
+    {
+        inputs: [
+            `CAST(11 AS INT64)`,
+            `CAST(3 AS INT64)`
+        ],
+        expected_output: `CAST(1 AS INT64)`
+    },
+]);
