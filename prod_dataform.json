@@ -1,6 +1,7 @@
 {
     "warehouse": "bigquery",
     "defaultSchema": "example_dataset",
+    "assertionSchema": "dataform_assertions",
     "defaultDatabase": "danny-bq",
     "defaultLocation": "US",
     "concurrentQueryLimit": 100
