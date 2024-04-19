@@ -28,4 +28,5 @@ Executing the following dataform command:
 dataform run %s %s
 ************************************************************
 """ "${all_dataform_tags}" "${all_dataform_actions}"
-dataform run --run-tests $(echo "${all_dataform_tags}" "${all_dataform_actions}" | xargs)
+dataform test $(echo "${all_dataform_tags}" "${all_dataform_actions}" | xargs) --vars=run_unit_tests:true
+dataform run $(echo "${all_dataform_tags}" "${all_dataform_actions}" | xargs)
