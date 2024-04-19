@@ -14,13 +14,13 @@
 
 const { generate_udf_test } = unit_test_utils;
 
-generate_udf_test("bqutil.fn.int", [
+generate_udf_test("int", [
     {
         inputs: [`"-1"`],
         expected_output: `CAST(-1 AS INT64)`
     },
 ]);
-generate_udf_test("bqutil.fn.int", [
+generate_udf_test("int", [
     {
         inputs: [`CAST(1 AS INT64)`],
         expected_output: `CAST(1 AS INT64)`
