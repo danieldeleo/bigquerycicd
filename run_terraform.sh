@@ -6,7 +6,7 @@ fi
 echo "Using '${BRANCH_NAME}' environment"
 
 # Edit these variables.
-TF_BACKEND_BUCKET="zr-dev-vincegonzalez"
+TF_BACKEND_BUCKET="your-project-id"
 TF_BACKEND_PREFIX="terraform/state/${BRANCH_NAME}"
 
 cd terraform || (echo "Could not change directory."; exit)
