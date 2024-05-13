@@ -16,7 +16,8 @@ if [ -d "${DIR}" ]; then
     terraform apply -auto-approve \
         -var project_id="${PROJECT_ID}" \
         -var dataset_id="${BQ_DATASET_ID}" \
-        -var location="${BQ_LOCATION}"
+        -var location="${BQ_LOCATION}" \ 
+        -var owner="${SERVICE_ACCOUNT_EMAIL}"
 
 else
     echo "***************************** SKIPPING APPLYING *******************************"
