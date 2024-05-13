@@ -9,6 +9,7 @@ steps:
       - run_terraform.sh
     env:
       - PROJECT_ID=${PROJECT_ID}
+      - SERVICE_ACCOUNT_EMWIL=${SERVICE_ACCOUNT_EMWIL}
       - BQ_LOCATION=${_BQ_LOCATION}
       - BQ_DATASET_ID=${_BQ_DATASET_ID}
       - BRANCH_NAME=${BRANCH_NAME}
