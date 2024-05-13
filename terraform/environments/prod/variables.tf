@@ -12,5 +12,4 @@ variable "owner" {
 
 variable "location" {
   type = string
-  default = "US"
 }

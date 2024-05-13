@@ -10,6 +10,7 @@ steps:
     env:
       - PROJECT_ID=${PROJECT_ID}
       - BQ_LOCATION=${_BQ_LOCATION}
+      - BQ_DATASET_ID=${_BQ_DATASET_ID} || 'example_dataset'
       - BRANCH_NAME=${BRANCH_NAME}
       - SHORT_SHA=${SHORT_SHA}
       - _PR_NUMBER=${_PR_NUMBER}

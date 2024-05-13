@@ -14,7 +14,9 @@ if [ -d "${DIR}" ]; then
         -backend-config="bucket=${TF_BACKEND_BUCKET}" \
         -backend-config="prefix=${TF_BACKEND_PREFIX}"
     terraform apply -auto-approve \
-        -var-file="../../../${BRANCH_NAME}.tfvars"
+        -var project_id="${PROJECT_ID}" \
+        -var dataset_id="${BQ_DATASET_ID}" \
+        -var location="${BQ_LOCATION}"
 
 else
     echo "***************************** SKIPPING APPLYING *******************************"
