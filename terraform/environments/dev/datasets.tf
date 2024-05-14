@@ -4,7 +4,7 @@ module "bigquery-dataset" {
   id         = var.dataset_id
   location   = var.location
   access = {
-    owner          = { role = "READER", type = "user" }
+    owner          = { role = "OWNER", type = "user" }
   }
   access_identities = {
     owner          = var.owner

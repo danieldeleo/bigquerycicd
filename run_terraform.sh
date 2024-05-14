@@ -17,7 +17,7 @@ if [ -d "${DIR}" ]; then
         -var project_id="${PROJECT_ID}" \
         -var dataset_id="${BQ_DATASET_ID}" \
         -var location="${BQ_LOCATION}" \
-        -var owner="${SERVICE_ACCOUNT_EMAIL}"
+        -var owner="${OWNER}"
 
 else
     echo "***************************** SKIPPING APPLYING *******************************"
